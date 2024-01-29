@@ -1,0 +1,130 @@
+/* Google Web Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+/* Fontawesome 4.7 CDN */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 1.6em;
+  color: #333;
+  margin: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Accordian Image Gallery */
+.gallery {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+.gallery li {
+  border-right: 5px solid #000;
+  width: 20%;
+  height: 100vh;
+  flex: 1;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+.gallery li h2 {
+  position: absolute;
+  top: 10px;
+  left: -100px;
+  color: #4e4e4e;
+  font-size: 15px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+  width: 70px;
+  transition: 0.5s;
+  transition-delay: 0.35s;
+}
+.gallery li:hover h2 {
+  left: 10px;
+}
+.gallery li:last-child {
+  border: none;
+}
+.gallery li:nth-child(1) {
+  background: url(images/image-01.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(2) {
+  background: url(images/image-02.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(3) {
+  background: url(images/image-03.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(4) {
+  background: url(images/image-04.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:nth-child(5) {
+  background: url(images/image-05.jpg) no-repeat center center;
+  background-size: cover;
+}
+.gallery li:hover {
+  flex: 3;
+  filter: grayscale(0);
+}
+.content {
+  position: absolute;
+  bottom: -250px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #000;
+}
+.content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  transform-origin: bottom left;
+  transform: rotate(-3deg) scale(1.1);
+  background-color: #000;
+}
+.gallery li:hover .content {
+  bottom: 0;
+  transition: 0.5s;
+  transition-delay: 0.35s;
+}
+.content p {
+  color: #fff;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 35px;
+}
+.content p strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 18px;
+  color: royalblue;
+}
+.content .sns {
+  text-align: center;
+}
+.content .sns a {
+  color: #fff;
+  margin: 0 5px;
+  background-color: #383434;
+  display: inline-block;
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  border-radius: 20px;
+}
